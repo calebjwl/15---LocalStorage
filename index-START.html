@@ -39,6 +39,7 @@
     }
     items.push(item);
     populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
     this.reset();
   }
 
@@ -51,7 +52,7 @@
       </li>
       `;
     }).join('');
-    // .join('') takes resulting array (bc of map function) and converts to stringd
+    // .join('') takes resulting array (bc of map function) and converts to string
   }
 
   addItems.addEventListener('submit', addItem);
